@@ -11,11 +11,14 @@
         <h3>Autor: Strefa kursow</h3>
         <h4>Wszelkie prawa zastrzezone</h4>
     </div>
-        <p>To jest akapit</p>
-        <em>To jest wyrózniony tekst</em>
-        <strong>Tu jest pogrubiony tekst</strong>
-        <a href="http://strefakursow.pl">LINK</a>
-
+    {% for post in posts %}
+    <div>
+        <p>opublikowany: {{ post.publish_date }}</p>
+        <h2><a href =''>{{post.title}}<a/></a></h2>
+        <em>{{post.text|linebreaksbr}}</em>
+    </div>
+    {% endfor %}
+    <div>
 
 <h1> witam na stronie bloga</h1>
 </body>
